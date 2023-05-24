@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "119310028495",
+    "firebase_url": "https://rasam-941b7.firebaseio.com",
+    "project_id": "rasam-941b7",
+    "storage_bucket": "rasam-941b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119310028495:android:4e68462534245451d971ba",
+        "android_client_info": {
+          "package_name": "com.real.hadi.addcontact"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119310028495-77nmevlg2qusiobjpbng74sjiqfpecjh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj2OuZwzGN4cU9YIRD1yKPraNitdyyTmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119310028495-77nmevlg2qusiobjpbng74sjiqfpecjh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119310028495:android:9e390c78fa5ef147d971ba",
+        "android_client_info": {
+          "package_name": "rasam.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119310028495-77nmevlg2qusiobjpbng74sjiqfpecjh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj2OuZwzGN4cU9YIRD1yKPraNitdyyTmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119310028495-77nmevlg2qusiobjpbng74sjiqfpecjh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/header"
+    android:layout_below="@id/footer"
+    android:background="@color/appbackground">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/appbackground"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="right"
+                android:text="اضافه کردن زیر گروه"
+                android:textAppearance="@style/FontForEditText"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:layout_marginTop="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--android:gravity="center"-->
+
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/edittextlayout"
+                android:elevation="8dp"
+                android:hint="شماره تلفن(اجباری)"
+                android:inputType="number"
+
+                android:padding="5dp"
+                android:textAppearance="@style/FontForEditText"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtFamily" />
+
+            <Spinner
+                android:id="@+id/spnEducation"
+                style="@style/SpinnerTheme"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/edittextlayout"
+                android:elevation="8dp"
+                android:gravity="right"
+
+                android:padding="5dp"
+                android:textDirection="rtl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtPhone">
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/spnJob"
+                style="@style/SpinnerTheme"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/edittextlayout"
+                android:elevation="8dp"
+                android:gravity="right"
+                android:padding="5dp"
+
+                android:textDirection="rtl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spnEducation">
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/spnDistrict"
+                style="@style/SpinnerTheme"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/edittextlayout"
+
+                android:elevation="8dp"
+                android:gravity="right"
+                android:padding="5dp"
+
+                android:textDirection="rtl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtBirthDay">
+
+            </Spinner>
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/edittextlayout"
+                android:elevation="8dp"
+                android:hint="نام(اجباری)"
+                android:inputType="textNoSuggestions"
+                android:padding="5dp"
+                android:textAppearance="@style/FontForEditText"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtFamily"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/edittextlayout"
+                android:elevation="8dp"
+                android:hint="نام خانوادگی(اجباری)"
+                android:inputType="textNoSuggestions"
+                android:padding="5dp"
+                android:textAppearance="@style/FontForEditText"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtName" />
+
+            <EditText
+                android:id="@+id/edtBirthDay"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/edittextlayout"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_date_range_white_24dp"
+                android:editable="false"
+                android:elevation="8dp"
+                android:focusable="false"
+
+                android:hint="تاریخ تولد"
+                android:inputType="textNoSuggestions"
+                android:padding="5dp"
+                android:textAppearance="@style/FontForEditText"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spnJob" />
+
+            <LinearLayout
+                android:id="@+id/lnrTrack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spnLayout">
+
+
+                <EditText
+                    android:id="@+id/edtTrackNumber"
+                    android:layout_width="64dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/edittextlayout"
+                    android:elevation="8dp"
+                    android:hint="تعداد"
+                    android:inputType="textNoSuggestions"
+                    android:padding="5dp"
+                    android:textAppearance="@style/FontForEditText"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView"
+                    app:layout_constraintTop_toBottomOf="@+id/spnDistrict" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="تعداد فیلد های پیگیری :"
+                    android:textAppearance="@style/FontForEditText"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/spnLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spnDistrict">
+
+                <Spinner
+                    android:id="@+id/spnE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/edittextlayout"
+                    android:elevation="8dp"
+                    android:gravity="center"
+
+                    android:textAlignment="center"
+                    tools:layout_editor_absoluteY="511dp" />
+
+                <Spinner
+                    android:id="@+id/spnD"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/edittextlayout"
+                    android:elevation="8dp"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:layout_editor_absoluteY="511dp" />
+
+                <Spinner
+                    android:id="@+id/spnC"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edittextlayout"
+                    android:elevation="8dp"
+                    android:gravity="center"
+
+
+                    tools:layout_editor_absoluteY="511dp" />
+
+                <Spinner
+                    android:id="@+id/spnB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/edittextlayout"
+                    android:elevation="8dp"
+                    android:gravity="center"
+
+                    android:textAlignment="center"
+                    tools:layout_editor_absoluteY="511dp" />
+
+                <Spinner
+                    android:id="@+id/spnA"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/edittextlayout"
+                    android:elevation="8dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+
+                    tools:layout_editor_absoluteY="511dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAddTrack"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/buttonlayout"
+                android:inputType="textNoSuggestions"
+                android:text="اضافه کردن فیلد های تاریخ پیگیری و توضیحات"
+                android:textAppearance="@style/FontForEditText"
+                android:textColor="#fff"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lnrTrack" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="158dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnAddTrack">
+
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+
+
+        <!--        <Button-->
+        <!--        android:id="@+id/btnSelectContact"-->
+        <!--        android:layout_width="60dp"-->
+        <!--        android:layout_height="60dp"-->
+        <!--        android:layout_marginLeft="8dp"-->
+        <!--        android:layout_marginRight="8dp"-->
+        <!--        android:layout_weight="0.25"-->
+        <!--        android:background="@drawable/orangebutton"-->
+        <!--        android:text="دفترچه تلفن"-->
+        <!--        android:textAppearance="@style/FontForEditText"-->
+        <!--        android:textColor="#fff"-->
+        <!--        android:textSize="15sp"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toStartOf="@+id/btnContactList"-->
+        <!--        app:layout_constraintTop_toTopOf="parent"-->
+        <!--        app:layout_constraintVertical_bias="0.0" />-->
+        <Button
+            android:id="@+id/btnExite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="0.25"
+            android:background="@drawable/redbutton"
+            android:textAppearance="@style/FontForEditText"
+            android:textColor="#fff"
+            android:text="خروج"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnContactList"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+        <Button
+            android:id="@+id/btnAddMultiContact"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="0.25"
+            android:background="@drawable/edittextlayout"
+            android:textAppearance="@style/FontForEditText"
+            android:textColor="#fff"
+            android:text="افزودن از دفترچه تلفن"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnContactList"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btnContactList"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="0.25"
+            android:background="@drawable/bluebutton"
+            android:gravity="center"
+            android:text="لیست مخاطبان"
+            android:textAppearance="@style/FontForEditText"
+            android:textColor="#fff"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnAddContact"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btnAddContact"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="0.25"
+            android:background="@drawable/greenbutton"
+            android:text="افزودن مخاطب"
+            android:textAppearance="@style/FontForEditText"
+            android:textColor="#fff"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </LinearLayout>
+
+</RelativeLayout>

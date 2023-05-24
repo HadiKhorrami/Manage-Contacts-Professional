@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="generalnotitle">
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="FontForEditText" parent="Base.TextAppearance.AppCompat.Button">
+
+        <item name="fontFamily">@font/iransans</item>
+
+    </style>
+    <style name="SpinnerTheme">
+        <item name="android:textColor">#FF0909</item>
+        <item name="fontFamily">@font/iransans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">20sp</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">@font/iransans</item>
+
+    </style>
+    <style name="scrollstyle">
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:fadeScrollbars">false</item>
+    </style>
+</resources>
